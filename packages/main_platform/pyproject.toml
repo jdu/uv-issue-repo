@@ -1,0 +1,20 @@
+[project]
+name = "main_platform"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["django>=5.1", "coreapp"]
+
+[tool.uv.sources]
+coreapp = { workspace = true }
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.setuptools]
+py-modules = ["data_platform"]
